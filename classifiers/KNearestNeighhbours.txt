@@ -1,0 +1,46 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     Weka
+Instances:    5574
+Attributes:   5
+              charlength
+              currencycount
+              numstring
+              freqword
+              score
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5308               95.2278 %
+Incorrectly Classified Instances       266                4.7722 %
+Kappa statistic                          0.7894
+Mean absolute error                      0.0555
+Root mean squared error                  0.2153
+Relative absolute error                 23.9089 %
+Root relative squared error             63.2065 %
+Total Number of Instances             5574     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.977    0.206    0.968      0.977    0.973      0.790    0.945     0.989     ham
+                 0.794    0.023    0.841      0.794    0.817      0.790    0.945     0.786     spam
+Weighted Avg.    0.952    0.182    0.951      0.952    0.952      0.790    0.945     0.962     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4715  112 |    a = ham
+  154  593 |    b = spam
+

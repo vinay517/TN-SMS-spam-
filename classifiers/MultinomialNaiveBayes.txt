@@ -1,0 +1,56 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayesMultinomial 
+Relation:     Weka
+Instances:    5574
+Attributes:   5
+              charlength
+              currencycount
+              numstring
+              freqword
+              score
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+The independent probability of a class
+--------------------------------------
+ham	0.8658536585365854
+spam	0.13414634146341464
+
+The probability of a word given the class
+-----------------------------------------
+	ham	spam	
+charlength	0.9750547169544896	0.9538945899803573	
+currencycount	7.060252192208303E-5	0.003019844693701467	
+numstring	0.0035555430039961033	0.030666568758834653	
+freqword	0.021319137519592204	0.012418996567106638	
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5266               94.4743 %
+Incorrectly Classified Instances       308                5.5257 %
+Kappa statistic                          0.7536
+Mean absolute error                      0.0888
+Root mean squared error                  0.2177
+Relative absolute error                 38.2219 %
+Root relative squared error             63.9129 %
+Total Number of Instances             5574     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.974    0.246    0.962      0.974    0.968      0.754    0.914     0.976     ham
+                 0.754    0.026    0.820      0.754    0.785      0.754    0.914     0.803     spam
+Weighted Avg.    0.945    0.217    0.943      0.945    0.944      0.754    0.914     0.953     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4703  124 |    a = ham
+  184  563 |    b = spam
+

@@ -1,0 +1,63 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -E 1.0 -C 250007" -calibrator "weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4"
+Relation:     Weka
+Instances:    5574
+Attributes:   5
+              charlength
+              currencycount
+              numstring
+              freqword
+              score
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: ham, spam
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+         0.6814 * (normalized) charlength
+ +       3.3922 * (normalized) currencycount
+ +       5.7068 * (normalized) numstring
+ +      -1.641  * (normalized) freqword
+ -       1.4474
+
+Number of kernel evaluations: 64387 (66.248% cached)
+
+
+
+Time taken to build model: 0.07 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5275               94.6358 %
+Incorrectly Classified Instances       299                5.3642 %
+Kappa statistic                          0.7422
+Mean absolute error                      0.0536
+Root mean squared error                  0.2316
+Relative absolute error                 23.0999 %
+Root relative squared error             67.9861 %
+Total Number of Instances             5574     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.988    0.323    0.952      0.988    0.970      0.752    0.833     0.951     ham
+                 0.677    0.012    0.897      0.677    0.772      0.752    0.833     0.651     spam
+Weighted Avg.    0.946    0.281    0.945      0.946    0.943      0.752    0.833     0.911     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4769   58 |    a = ham
+  241  506 |    b = spam
+

@@ -1,0 +1,93 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     Weka
+Instances:    5574
+Attributes:   5
+              charlength
+              currencycount
+              numstring
+              freqword
+              score
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+numstring <= 1: ham (4691.0/98.0)
+numstring > 1
+|   numstring <= 3
+|   |   currencycount <= 0
+|   |   |   charlength <= 128
+|   |   |   |   numstring <= 2: ham (126.0/24.0)
+|   |   |   |   numstring > 2
+|   |   |   |   |   freqword <= 1: spam (20.0/7.0)
+|   |   |   |   |   freqword > 1: ham (20.0/8.0)
+|   |   |   charlength > 128
+|   |   |   |   charlength <= 163: spam (146.0/43.0)
+|   |   |   |   charlength > 163: ham (17.0/1.0)
+|   |   currencycount > 0
+|   |   |   charlength <= 90
+|   |   |   |   numstring <= 2: spam (2.0)
+|   |   |   |   numstring > 2: ham (3.0)
+|   |   |   charlength > 90: spam (41.0/1.0)
+|   numstring > 3
+|   |   charlength <= 168
+|   |   |   currencycount <= 0
+|   |   |   |   freqword <= 2
+|   |   |   |   |   charlength <= 141
+|   |   |   |   |   |   numstring <= 8
+|   |   |   |   |   |   |   charlength <= 140: spam (60.0/6.0)
+|   |   |   |   |   |   |   charlength > 140: ham (4.0/1.0)
+|   |   |   |   |   |   numstring > 8: ham (7.0/2.0)
+|   |   |   |   |   charlength > 141: spam (143.0/4.0)
+|   |   |   |   freqword > 2
+|   |   |   |   |   freqword <= 3
+|   |   |   |   |   |   charlength <= 135
+|   |   |   |   |   |   |   charlength <= 98: ham (2.0)
+|   |   |   |   |   |   |   charlength > 98: spam (3.0/1.0)
+|   |   |   |   |   |   charlength > 135: spam (46.0/2.0)
+|   |   |   |   |   freqword > 3: ham (8.0)
+|   |   |   currencycount > 0: spam (207.0/4.0)
+|   |   charlength > 168
+|   |   |   charlength <= 236
+|   |   |   |   freqword <= 2: spam (10.0)
+|   |   |   |   freqword > 2
+|   |   |   |   |   numstring <= 6: spam (4.0/1.0)
+|   |   |   |   |   numstring > 6: ham (2.0)
+|   |   |   charlength > 236: ham (12.0)
+
+Number of Leaves  : 	22
+
+Size of the tree : 	43
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5323               95.497  %
+Incorrectly Classified Instances       251                4.503  %
+Kappa statistic                          0.7986
+Mean absolute error                      0.0701
+Root mean squared error                  0.1944
+Relative absolute error                 30.1687 %
+Root relative squared error             57.054  %
+Total Number of Instances             5574     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.981    0.212    0.968      0.981    0.974      0.800    0.908     0.970     ham
+                 0.788    0.019    0.864      0.788    0.824      0.800    0.908     0.825     spam
+Weighted Avg.    0.955    0.186    0.954      0.955    0.954      0.800    0.908     0.950     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4734   93 |    a = ham
+  158  589 |    b = spam
+

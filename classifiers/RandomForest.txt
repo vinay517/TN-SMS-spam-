@@ -1,0 +1,48 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     Weka
+Instances:    5574
+Attributes:   5
+              charlength
+              currencycount
+              numstring
+              freqword
+              score
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.93 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances        5320               95.4431 %
+Incorrectly Classified Instances       254                4.5569 %
+Kappa statistic                          0.8007
+Mean absolute error                      0.0588
+Root mean squared error                  0.1917
+Relative absolute error                 25.3145 %
+Root relative squared error             56.2847 %
+Total Number of Instances             5574     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.976    0.187    0.971      0.976    0.974      0.801    0.944     0.984     ham
+                 0.813    0.024    0.842      0.813    0.827      0.801    0.944     0.864     spam
+Weighted Avg.    0.954    0.165    0.954      0.954    0.954      0.801    0.944     0.968     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 4713  114 |    a = ham
+  140  607 |    b = spam
+
